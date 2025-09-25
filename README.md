@@ -16,7 +16,7 @@ Thanks to Deepseek once again 👍🏿
 - Test by having the correct role and pinging the bot
   - You will receive log message in the console if everything worked
 ### .env
-- `DISCORD-TOKEN` - Bot token
+- `DISCORD_TOKEN` - Bot token
 - `WEBHOOK_URL` - Webhook url you want to trigger
 - `TARGET_CHANNEL_ID` - Channel ID to listen from
 - `REQUIRED_ROLE_ID` - Role ID needed to trigger the webhook
