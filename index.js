@@ -17,6 +17,11 @@ client.once("ready", () => {
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
   if (message.channel.id !== process.env.TARGET_CHANNEL_ID) return;
+  if (!message.mentions.has(client.user)) return;
+  // role check
+  if (!message.member.roles.cache.has(process.env.REQUIRED_ROLE_ID)) {
+    return;
+  }
 
   try {
     await axios.get(process.env.WEBHOOK_URL);
